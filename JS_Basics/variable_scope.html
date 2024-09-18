@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Variable Scope</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var a = 5; // Global variable
+
+      function f() {
+        a = 10; // Modifies the global variable 'a'
+      }
+
+      function f1() {
+        var a = 1000; // Local variable 'a'
+        alert("F1: " + a); // Alerts the local 'a'
+      }
+
+      function f2() {
+        alert("F2: " + a); // Alerts the global 'a' because 'a' is not defined locally
+      }
+
+      function f3() {
+        alert("F3: " + a); // Alerts 'undefined' because 'a' is declared after the alert
+        var a; // Declares a local variable 'a' but doesn't initialize it
+      }
+
+      function f4() {
+        alert("F4: " + a); // Alerts the global 'a'
+        a = 20; // Modifies the global variable 'a'
+      }
+
+      console.log("a = " + a); // Logs the initial value of global 'a'
+
+      f(); // Calls function f, which changes global 'a' to 10
+      console.log("a = " + a + " after calling f"); // Logs the updated value of global 'a'
+
+      f1(); // Calls function f1, which uses a local 'a' of 1000
+      console.log("a = " + a + " after calling f1"); // Logs the unchanged global 'a'
+
+      f2(); // Calls function f2, which alerts the global 'a'
+      f3(); // Calls function f3, which alerts 'undefined' and then declares a local 'a'
+      f4(); // Calls function f4, which sets global 'a' to 20
+
+      console.log("a = " + a + " after calling f4"); // Logs the final value of global 'a'
+
+      function f5() {
+        b = 123; // 'b' is global because it is not declared with 'var'
+      }
+
+      f5(); // Calls function f5, which sets global 'b' to 123
+      console.log("b = " + b); // Logs the global variable 'b'
+
+      function f6() {
+        var c = 321; // Local variable 'c'
+        console.log("c = " + c); // Logs the local 'c'
+      }
+
+      f6(); // Calls function f6, which logs the local 'c'
+    </script>
+  </body>
+</html>

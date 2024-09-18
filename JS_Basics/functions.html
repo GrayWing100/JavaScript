@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculate Area</title>
+  </head>
+  <body>
+    <h1>Area Calculation</h1>
+    <script>
+      function calculateArea(width, height) {
+        var area = height * width;
+        return area;
+      }
+
+      var roomWidth = 5;
+      var roomLength = 3.75;
+
+      var area1 = calculateArea(1, 5); // Passing constants as parameters to the function
+      var area2 = calculateArea(roomWidth, roomLength); // Passing variables as parameters to the function
+
+      document.write("Area of Room 1: " + area1);
+      document.write("<br>");
+      document.write("Area of Room 2: " + area2);
+    </script>
+  </body>
+</html>

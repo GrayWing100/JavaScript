@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Granjanje</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var x = 5;
+
+      // Basic if-else structure
+      if (x === 5) {
+        // Strict comparison (checks both value and type)
+        console.log("Promenljiva ima vrednost pet (broj).");
+      } else if (x > 5) {
+        console.log("Promenljiva ima vrednost koja je veca od pet.");
+      } else if (x < 5) {
+        console.log("Promenljiva ima vrednost koja je manja od pet.");
+      } else {
+        console.error("Promenljiva nije broj!");
+      }
+
+      // What happens if x is a string "5" instead of the number 5?
+      x = "5"; // Changing x to a string
+      if (x === 5) {
+        console.log("Strict comparison: Promenljiva ima vrednost pet (broj).");
+      } else if (x == 5) {
+        // Loose comparison (checks only value, not type)
+        console.log("Loose comparison: Promenljiva ima vrednost pet (string).");
+      } else {
+        console.log("Promenljiva ima vrednost koja nije pet.");
+      }
+
+      // Additional checks for NaN (Not-a-Number) values
+      var y = "Hello";
+      if (isNaN(y)) {
+        console.log("Promenljiva nije broj! (y = " + y + ")");
+      } else {
+        console.log("Promenljiva je broj!");
+      }
+
+      // Multiple conditions combined using logical operators
+      var age = 20;
+      var hasID = true;
+
+      if (age >= 18 && hasID) {
+        console.log("Osoba moze uci jer je punoletna i ima ID.");
+      } else if (age >= 18 && !hasID) {
+        console.log("Osoba je punoletna, ali nema ID.");
+      } else {
+        console.log("Osoba nije punoletna.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Truthy and Falsy Values</title>
+  </head>
+  <body>
+    <h1>Console Output for Truthy and Falsy Values</h1>
+    <script>
+      // Truthy and Falsy values for number type
+      console.log("0 is:", 0 ? "Truthy" : "Falsy"); // Falsy
+      console.log("1 is:", 1 ? "Truthy" : "Falsy"); // Truthy
+      console.log("-1 is:", -1 ? "Truthy" : "Falsy"); // Truthy
+
+      // Truthy and Falsy values for string type
+      console.log("Empty string is:", "" ? "Truthy" : "Falsy"); // Falsy
+      console.log("Non-empty string is:", "random string" ? "Truthy" : "Falsy"); // Truthy
+
+      // Truthy and Falsy values for objects
+      console.log("Empty object {} is:", {} ? "Truthy" : "Falsy"); // Truthy
+      console.log("undefined is:", undefined ? "Truthy" : "Falsy"); // Falsy
+      console.log("null is:", null ? "Truthy" : "Falsy"); // Falsy
+      var foo = function () {};
+      console.log("Function is:", foo ? "Truthy" : "Falsy"); // Truthy
+
+      // Assignment based on truthy and falsy values
+      var a1; // undefined - falsy
+      var b1 = "bla"; // non-empty string - truthy
+      var c1 = a1 || b1; // value of b1 - first truthy value
+      console.log("C1: " + c1); // "bla"
+
+      var a2 = 6; // number - truthy
+      var b2 = "bla"; // non-empty string - truthy
+      var c2 = a2 || b2; // value of a2 - first truthy value
+      console.log("C2: " + c2); // 6
+
+      var a3 = 0; // number 0 - falsy
+      var b3 = ""; // empty string - falsy
+      var c3 = a3 || b3; // value of b3 - no truthy values, takes last falsy value
+      console.log("C3: " + c3); // ""
+    </script>
+  </body>
+</html>

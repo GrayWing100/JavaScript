@@ -1,0 +1,44 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Do While Loops</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      var i = 0;
+
+      // Do...while loop: the body executes first, then the condition is checked
+      do {
+        alert("i= " + i + " i uvecava se za 1");
+        i++;
+      } while (i < 5);
+
+      alert("i je dostigao vrednost 5 i petlja je zavrsena.");
+
+      // Additional example with a condition that is false at the beginning
+      var j = 10;
+      document.write(
+        "<br>Demonstracija kada je uslov vec u startu netacan:<br>"
+      );
+      do {
+        document.write("j = " + j + "<br>");
+        j++;
+      } while (j < 5);
+      document.write(
+        "j je bilo 10, ali se petlja izvrsila bar jednom pre provere uslova.<br>"
+      );
+
+      // Adding a demonstration of a do...while loop with user input
+      var input;
+      do {
+        input = prompt("Unesite broj manji od 10:", "");
+      } while (input >= 10);
+
+      document.write(
+        "Uneli ste: " + input + " (manje od 10). Petlja je zavrsena."
+      );
+    </script>
+  </body>
+</html>

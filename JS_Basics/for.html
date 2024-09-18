@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>For Loops</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      var niz = [
+        "Ponedeljak",
+        "Utorak",
+        "Sreda",
+        "Cetvrtak",
+        "Petak",
+        "Subota",
+        "Nedelja",
+        1,
+        2,
+        3,
+      ];
+
+      // Using a for loop to iterate over the array and print each element
+      for (var i = 0; i < niz.length; i++) {
+        document.write(niz[i] + "<br>"); // Display each element followed by a line break
+      }
+
+      // Explanation of array indexing
+      var a = [1, 2];
+      document.write("<br>Accessing specific elements in array 'a':<br>");
+      document.write("a[0] = " + a[0] + "<br>"); // Outputs 1
+      document.write("a[1] = " + a[1] + "<br>"); // Outputs 2
+      document.write("a[2] = " + a[2] + " (undefined)<br>"); // Outputs undefined, as the index does not exist
+
+      // Enhanced: Using a for...of loop to iterate over the array for more readable code
+      document.write("<br>Using a for...of loop:<br>");
+      for (var element of niz) {
+        document.write(element + "<br>");
+      }
+    </script>
+  </body>
+</html>

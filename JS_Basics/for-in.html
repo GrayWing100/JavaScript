@@ -1,0 +1,42 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>For In Loops in JavaScript</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      // Array definition and initialization in JavaScript
+      var dani = [
+        "Ponedeljak",
+        "Utorak",
+        "Sreda",
+        "Cetvrtak",
+        "Petak",
+        "Subota",
+        "Nedelja",
+      ];
+
+      // Using for...in loop to iterate over array indices
+      document.write("<h3>For...in loop (Iterating over indices):</h3>");
+      for (var i in dani) {
+        // 'i' represents the indices of the array
+        document.write(i + ". "); // Display the index
+        document.write(dani[i]); // Display the corresponding value
+        document.write("<br>");
+      }
+
+      // Alternative: Using for...of loop to iterate over array values directly
+      document.write("<h3>For...of loop (Iterating over values):</h3>");
+      var index = 0;
+      for (var dan of dani) {
+        // 'dan' represents the value at each index of the array
+        document.write(index + ". "); // Display the index manually
+        document.write(dan); // Display the value directly
+        document.write("<br>");
+        index++;
+      }
+    </script>
+  </body>
+</html>

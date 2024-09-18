@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Conversion</title>
+  </head>
+  <body>
+    <script>
+      var x = 5;
+      var yStr = "7";
+
+      var yNum = parseInt(yStr);
+      var zbir = yNum + x;
+
+      console.log("Zbir je: " + zbir);
+
+      console.log("Konverzija stringa u float:");
+      var fl = parseFloat("7.5");
+      console.log("Rezultat je : " + fl + " , a tip je " + typeof fl); // typeof je ugradjena funkcija i vraca tip promenljive
+
+      console.log("Konverzija stringa u Number:");
+      var num = Number("17");
+      console.log("Rezultat je : " + num + " , a tip je " + typeof num);
+
+      console.log("Konverzija broja u String:");
+      var str = String(18); // moze da se pozove i toString() metoda, npr x.toString();
+      console.log("Rezultat je : " + str + " , a tip je " + typeof str);
+
+      console.log("Konverzija praznog teksta u boolean daje: " + Boolean(""));
+      console.log(
+        "Konverzija nepraznog teksta u boolean daje: " + Boolean("Neki tekst")
+      );
+      console.log("Konverzija nule u boolean daje: " + Boolean(0));
+      console.log(
+        "Konverzija nekog broja izuzev nule u boolean daje: " + Boolean(17)
+      );
+    </script>
+  </body>
+</html>
