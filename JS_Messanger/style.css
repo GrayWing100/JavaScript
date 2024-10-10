@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(purple, white);
+  overflow: hidden;
+}
+
+button {
+  width: fit-content;
+  padding: 8px;
+  cursor: pointer;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+button:hover {
+  background: rgba(45, 13, 13, 0.5); /* Fixed hover color */
+}
+
+.container {
+  width: 95%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  border: 1px solid lightblue;
+  background: whitesmoke;
+  border-radius: 5px;
+  width: 500px;
+  height: auto;
+  margin: auto;
+  padding: 20px; /* Added padding */
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.message input {
+  width: 450px; /* Increased width for better readability */
+  padding: 8px 0;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@media (max-width: 480px) {
+  .message input {
+    width: 82%;
+  }
+}

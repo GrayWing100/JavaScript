@@ -5,28 +5,28 @@ body {
 }
 
 .container {
-  border: 1px solid black;
   width: 95%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .hex-colors {
   border: 1px solid black;
   text-align: center;
+  padding: 20px;
 }
 
 .hex-colors h1 {
-  border: 1px solid black;
   font-size: 2rem;
   text-transform: uppercase;
   animation: colorchange 5s infinite alternate;
 }
 
 .hex-colors h2 {
-  border: 1px solid black;
   font-size: 2rem;
   margin-top: 15%;
 }
